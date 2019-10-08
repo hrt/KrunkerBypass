@@ -2,10 +2,8 @@ Credits to lemons for being that sibling figure you want to bury https://github.
 
 Also F to pay respects to everyone that was using it before public release.
 
-# KrunkerNameEsp
-https://krunker.io/
-This is just another way to "cheat" without modifiying the `game.js` logic.
-![name esp](https://i.imgur.com/PJoe4F3.png)
+# Explain
+Hook prototypes like `Array.prototype.push` to access player list.
 
 # How to install / use
 ## Developer Console F12
