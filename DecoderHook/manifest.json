@@ -1,0 +1,19 @@
+{
+  "name": "Krunker Name ESP",
+  "version": "1.9.9",
+  "manifest_version": 2,
+  "description": "https://github.com/hrt",
+  "permissions": [
+    "*://krunker.io/*"
+  ],
+  "web_accessible_resources": [
+    "esp.js"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://krunker.io/*"],
+      "run_at": "document_idle",
+      "js": ["onpageload.js"]
+    }
+  ]
+}
