@@ -2,9 +2,6 @@ Credits to lemons for being that sibling figure you want to bury https://github.
 
 Also F to pay respects to everyone that was using it before public release.
 
-# Explain
-Hook prototypes like `Array.prototype.push` to access player list.
-
 # How to install / use
 ## Developer Console F12
 1. Open a new tab

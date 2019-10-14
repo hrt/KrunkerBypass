@@ -1,8 +1,5 @@
 Credits to IceHacks https://github.com/IceHacks/ for publicly posting a script using the decoder - this is the same idea.
 
-# Explain
-The game must decode the game logic at some point. We alter krunker to access the code as soon as it gets decoded by using `MutationObservers`.
-
 # How to install / use
 ## Developer Console F12
 1. Open a new tab

@@ -1,16 +1,4 @@
 
-# Explain
-Krunker must dynamically execute code since they first decrypt/decode the logic. They can do this using one of the following [methods](https://www.everythingfrontend.com/posts/studying-javascript-eval.html) (or more..):
-* `eval`
-* `setTimeout`
-* `new Function()`
-* `document.write()`
-* `document.createElement('script'); // ..`
-
-Specifically, they are using `new Function()`. So we can hook this to modify the script directly.
-
-However, they have also placed [some checks](https://github.com/hrt/AnticheatJS#function-modification-detection) to see if `Function` has been modified in anyway: This can easily be bypassed by fixing the `.toString` member of the overwritten class/function.
-
 # How to install / use
 ## Developer Console F12
 1. Open a new tab
