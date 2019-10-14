@@ -7,3 +7,4 @@ Featuring only the bare minimum esps (this is not a cheat flex repo but an anti 
 | --- | --- |
 | ArrayPrototypeHook |  ✅  |
 | DecoderHook |  ✅  |
+| FunctionHook |  ✅  |
