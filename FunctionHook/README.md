@@ -1,3 +1,4 @@
+credits: me
 
 # How to install / use
 ## Developer Console F12
