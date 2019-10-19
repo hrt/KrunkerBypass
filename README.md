@@ -5,9 +5,9 @@ Featuring only the bare minimum esps (this is not a cheat flex repo but an anti 
 
 | Method | 1.7.7 |
 | --- | --- |
-| ArrayPrototypeHook |  ✅  |
-| DecoderHook |  ✅  |
-| FunctionHook |  ✅  |
+| [ArrayPrototypeHook](https://github.com/hrt/KrunkerBypass/tree/master/ArrayPrototypeHook) |  ✅  |
+| [DecoderHook](https://github.com/hrt/KrunkerBypass/tree/master/DecoderHook) |  ✅  |
+| [FunctionHook](https://github.com/hrt/KrunkerBypass/tree/master/FunctionHook) |  ✅  |
 
 
 ## ArrayPrototypeHook
