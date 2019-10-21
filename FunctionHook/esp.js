@@ -14,8 +14,8 @@
 
     const handler = {
       construct(target, args) {
-        if (args.length == 2 && args[1].includes('tmpObj')) {
-            args[1] = args[1].replace(/if\(!tmpObj\['inView'\]\)continue;/, '');
+        if (args.length == 2 && args[1].includes('isSeen')) {
+            args[1] = args[1].replace(/if\(!\w+\['isSeen'\]\)continue;/, '');
         }
         return new target(...args);
       }
