@@ -3,10 +3,10 @@ Anti-cheat bypasses for krunker
 
 Featuring only the bare minimum esps (this is not a cheat flex repo but an anti cheat bypass repo)
 
-| Method | 1.7.7 |
+| Method | 1.7.8 |
 | --- | --- |
 | [ArrayPrototypeHook](https://github.com/hrt/KrunkerBypass/tree/master/ArrayPrototypeHook) |  ✅  |
-| [DecoderHook](https://github.com/hrt/KrunkerBypass/tree/master/DecoderHook) |  ✅  |
+| [DecoderHook](https://github.com/hrt/KrunkerBypass/tree/master/DecoderHook) |     |
 | [FunctionHook](https://github.com/hrt/KrunkerBypass/tree/master/FunctionHook) |  ✅  |
 
 
