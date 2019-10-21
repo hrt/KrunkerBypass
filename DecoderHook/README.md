@@ -1,3 +1,5 @@
+RIP 1.7.8?
+
 Credits to IceHacks https://github.com/IceHacks/ for publicly posting a script using the decoder - this is the same idea.
 
 # How to install / use
