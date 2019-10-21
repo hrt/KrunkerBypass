@@ -14,7 +14,7 @@
     Array.prototype.push = function(...args) {
         original_push.apply(this, args);
         if (args.length == 1 && args[0] && args[0].armMeshes) {
-            Object.defineProperty(args[0], 'inView', { get: function() { return true } });
+            Object.defineProperty(args[0], 'isSeen', { get: function() { return true } });
         }
     }
 })()
