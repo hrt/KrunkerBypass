@@ -1,6 +1,4 @@
-RIP 1.7.8?
-
-Credits to IceHacks https://github.com/IceHacks/ for publicly posting a script using the decoder - this is the same idea.
+The replace method used on this decoder repo no longer works. You can still use Decoder though, check Lemons https://github.com/Lemons1337/Krunker-ESP/blob/master/script.user.js
 
 # How to install / use
 ## Developer Console F12
