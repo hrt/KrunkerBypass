@@ -10,6 +10,7 @@
 // ==/UserScript==
 
 (function(){
+    var hideHook = function(fn, oFn) { fn.toString = oFn.toString.bind(oFn); }
     var original_push = Array.prototype.push;
     Array.prototype.push = function(...args) {
         original_push.apply(this, args);
@@ -17,4 +18,5 @@
             Object.defineProperty(args[0], 'isSeen', { get: function() { return true } });
         }
     }
+    hideHook(Array.prototype.push, original_push);
 })()
