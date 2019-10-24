@@ -5,13 +5,13 @@ Featuring only the bare minimum esps (this is not a cheat flex repo but an anti 
 
 | Method | 1.7.8 |
 | --- | --- |
-| [ArrayPrototypeHook](https://github.com/hrt/KrunkerBypass/tree/master/ArrayPrototypeHook) |  ✅  |
+| [ArrayHook](https://github.com/hrt/KrunkerBypass/tree/master/ArrayHook) |  ✅  |
 | [DecoderHook](https://github.com/hrt/KrunkerBypass/tree/master/DecoderHook) |     |
 | [FunctionHook](https://github.com/hrt/KrunkerBypass/tree/master/FunctionHook) |  ✅  |
-| [ArgsHook](https://github.com/hrt/KrunkerBypass/tree/master/ArgsHook) |  ✅  |
+| [ArgumentsHook](https://github.com/hrt/KrunkerBypass/tree/master/ArgumentsHook) |  ✅  |
 
 
-## ArrayPrototypeHook
+## ArrayHook
 The game logic uses arrays to hold entities. We hook the prototype `Array.prototype.push` to access player list.
 
 ## DecoderHook
@@ -29,7 +29,7 @@ Specifically, they are using `new Function()`. So we can hook this to modify the
 
 Worth noting that they have also placed [some checks](https://github.com/hrt/AnticheatJS#function-modification-detection) to see if `Function` has been modified: This can easily be bypassed by fixing the `.toString` member of the overwritten class/function.
 
-## ArgsHook
-With [a bit of magic](https://github.com/hrt/KrunkerBypass/tree/master/ArgsHook/esp.js) we can hook any native function and access the chain of callers along with their respective arguments of said function.
+## ArgumentsHook
+With [a bit of magic](https://github.com/hrt/KrunkerBypass/tree/master/ArgumentsHook/esp.js) we can hook any native function and access the chain of callers along with their respective arguments of said function.
 
 tl;dr we can access almost all variables and functions in the game logic if we wanted to.
