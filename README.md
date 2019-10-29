@@ -5,10 +5,10 @@ Featuring only the bare minimum esps (this is not a cheat flex repo but an anti 
 
 | Method | 1.8.1.1 |
 | --- | --- |
+| [ArgumentsHook](https://github.com/hrt/KrunkerBypass/tree/master/ArgumentsHook) |  ✅  |
 | [ArrayHook](https://github.com/hrt/KrunkerBypass/tree/master/ArrayHook) |     |
 | [DecoderHook](https://github.com/hrt/KrunkerBypass/tree/master/DecoderHook) |     |
 | [FunctionHook](https://github.com/hrt/KrunkerBypass/tree/master/FunctionHook) |  ✅  |
-| [ArgumentsHook](https://github.com/hrt/KrunkerBypass/tree/master/ArgumentsHook) |  ✅  |
 
 
 ## ArrayHook
