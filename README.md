@@ -1,7 +1,7 @@
 # KrunkerBypass
 Anti-cheat bypasses for krunker
 
-Featuring only the bare minimum esps (this is not a cheat flex repo but an anti cheat bypass repo)
+Featuring only the bare minimum esps (this is not a cheat flex repo but an anti cheat bypass repo). Use Tamper monkey to load any
 
 | Method | 1.8.1.1 |
 | --- | --- |
