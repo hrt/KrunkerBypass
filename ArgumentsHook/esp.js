@@ -38,7 +38,11 @@
 		// now we can use arguments, callee, caller
 		var players = find_player_list(arguments.callee);
 		for (var i = 0; players && i < players.length; i++) {
-			players[i].isSeen = true;
+			for (var key in players[i]) {
+				if (key.includes("Seen")) {
+					players[i][key] = true;
+				}
+			}
 		}
 	}
 
