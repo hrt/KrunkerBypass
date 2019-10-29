@@ -14,8 +14,8 @@
 
     const handler = {
       construct(target, args) {
-        if (args.length == 2 && args[1].includes('isSeen')) {
-            args[1] = args[1].replace(/if\(!\w+\['isSeen'\]\)continue;/, '');
+        if (args.length == 2 && args[1].includes('Seen')) {
+            args[1] = args[1].replace(/if\(!\w+\['\w+Seen'\]\)continue;/, '');
         }
         return new target(...args);
       }
