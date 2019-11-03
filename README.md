@@ -11,6 +11,8 @@ Featuring only the bare minimum esps (this is not a cheat flex repo but an anti 
 | [FunctionHook](https://github.com/hrt/KrunkerBypass/tree/master/FunctionHook) |  detected - needs a fix  |
 
 
+1.8.3 - they begun hooking `String.prototype.replace` to detect modifications
+
 ## ArrayHook
 The game logic uses arrays to hold entities. We hook the prototype `Array.prototype.push` to access player list.
 
