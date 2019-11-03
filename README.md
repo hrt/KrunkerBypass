@@ -7,8 +7,8 @@ Featuring only the bare minimum esps (this is not a cheat flex repo but an anti 
 | --- | --- |
 | [ArgumentsHook](https://github.com/hrt/KrunkerBypass/tree/master/ArgumentsHook) |  ✅  |
 | [ArrayHook](https://github.com/hrt/KrunkerBypass/tree/master/ArrayHook) |  ✅  |
-| [DecoderHook](https://github.com/hrt/KrunkerBypass/tree/master/DecoderHook) |  blocked - needs a fix  |
-| [FunctionHook](https://github.com/hrt/KrunkerBypass/tree/master/FunctionHook) |  detected - needs a fix  |
+| [DecoderHook](https://github.com/hrt/KrunkerBypass/tree/master/DecoderHook) |  ✅  |
+| [FunctionHook](https://github.com/hrt/KrunkerBypass/tree/master/FunctionHook) |  ✅  |
 
 
 1.8.3 - they begun hooking `String.prototype.replace` to detect modifications
