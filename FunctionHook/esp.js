@@ -10,12 +10,13 @@
 // ==/UserScript==
 
 (function(){
-    var hideHook = function(fn, oFn) { fn.toString = oFn.toString.bind(oFn); }
+
+    const replace = String.prototype.replace;
 
     const handler = {
       construct(target, args) {
         if (args.length == 2 && args[1].includes('Seen')) {
-            args[1] = args[1].replace(/if\(!\w+\['\w+Seen'\]\)continue;/, '');
+            args[1] = replace.apply(args[1], [/if\(!\w+\['\w+Seen'\]\)continue;/, '']);
         }
         return new target(...args);
       }
@@ -23,5 +24,5 @@
 
     var original_Function = Function;
     Function = new Proxy(Function, handler);
-    hideHook(Function, original_Function);
+    var hideHook = function(fn, oFn) { fn.toString = oFn.toString.bind(oFn); } (Function, original_Function);
 })()
