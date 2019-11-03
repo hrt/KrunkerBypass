@@ -10,19 +10,15 @@
 // ==/UserScript==
 
 (function() {
+	window.replace = String.prototype.replace;
 	var observer = new MutationObserver(function(mutations, observer) {
 	    for (var i = 0; i < mutations.length; i++) {
 	    	var nodes = mutations[i].addedNodes;
 	    	for (var j = 0; j < nodes.length; j++) {
 	    		var node = nodes[j];
 	    		if (node.tagName == 'SCRIPT' && node.nodeName == 'SCRIPT' && node.src == '') {
-					var decoderRegex = /return (\w+\.decode\(\w+\(\)\.subarray\(\w+,\w+\+\w+\)\))/;
-					var decoder = node.innerHTML.match(decoderRegex);
-					if (!decoder) {
-						continue;
-					}
-					decoder = decoder[1];
-	    			node.innerHTML = node.innerHTML.replace(decoderRegex, 'var script=' + decoder + `;script=script.replace(/if\\(!\\w+\\['\\w+Seen'\\]\\)continue;/, '');return script`);
+					var decoderRegex = /return (\w+\.decode\(\w+\(\)\.subarray\(\w+,\w+\+\w+\)\))/g;
+					node.innerHTML = replace.call(node.innerHTML, decoderRegex, `var script=$1;script=replace.call(script,/if\\(!\\w+\\['\\w+Seen'\\]\\)continue;/, '');return script`);
 	    		}
 	    	}
 	    }
