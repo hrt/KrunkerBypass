@@ -15,8 +15,8 @@
 
     const handler = {
       construct(target, args) {
-        if (args.length == 2 && args[1].includes('Seen')) {
-            args[1] = replace.apply(args[1], [/if\(!\w+\['\w+Seen'\]\)continue;/, '']);
+        if (args.length == 2 && args[1].length > 1337) {
+            args[1] = replace.apply(args[1], [/if\(!\w+\['lhYWIWew'\]\)continue;/, '']);
         }
         return new target(...args);
       }
@@ -24,5 +24,9 @@
 
     var original_Function = Function;
     Function = new Proxy(Function, handler);
-    var hideHook = function(fn, oFn) { fn.toString = oFn.toString.bind(oFn); } (Function, original_Function);
+    var hideHook = function(fn, oFn) {
+        fn.toString = oFn.toString.bind(oFn);
+        fn.toString.toString = oFn.toString.toString.bind(oFn.toString.toString);
+    };
+    hideHook(Function, original_Function);
 })()
