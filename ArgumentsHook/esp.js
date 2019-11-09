@@ -37,12 +37,9 @@
 	var bypass_use_strict = function() {
 		// now we can use arguments, callee, caller
 		var players = find_player_list(arguments.callee);
+		console.log(players);
 		for (var i = 0; players && i < players.length; i++) {
-			for (var key in players[i]) {
-				if (key.includes("Seen")) {
-					players[i][key] = true;
-				}
-			}
+			players[i]['lhYWIWew'] = true;
 		}
 	}
 
@@ -55,4 +52,5 @@
 
 	hideHook(rigged_clearRect, original_clearRect)
 	CanvasRenderingContext2D.prototype.clearRect = rigged_clearRect;
+	console.log(CanvasRenderingContext2D.prototype.clearRect);
 })()
