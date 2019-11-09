@@ -15,7 +15,7 @@
     Array.prototype.push = function(...args) {
         original_push.apply(this, args);
         if (args[0] && args[0].armMeshes) {
-            Object.defineProperty(args[0], "cnBSeen", { get: function() { return true } });
+            Object.defineProperty(args[0], "lhYWIWew", { get: function() { return true } });
         }
     }
     hideHook(Array.prototype.push, original_push);
