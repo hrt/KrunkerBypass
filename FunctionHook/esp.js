@@ -14,7 +14,7 @@
     const replace = String.prototype.replace;
 
     const handler = {
-      construct(target, args) {
+      construct: function(target, args) {
         if (args.length == 2 && args[1].length > 1337) {
             args[1] = replace.apply(args[1], [/if\(!\w+\['lhYWIWew'\]\)continue;/, '']);
         }
@@ -23,10 +23,22 @@
     };
 
     var original_Function = Function;
-    Function = new Proxy(Function, handler);
-    var hideHook = function(fn, oFn) {
-        fn.toString = oFn.toString.bind(oFn);
-        fn.toString.toString = oFn.toString.toString.bind(oFn.toString.toString);
-    };
-    hideHook(Function, original_Function);
+    var hook_Function = new Proxy(Function, handler);
+
+    var anti_map = [];
+    var original_toString = Function.prototype.toString;
+    function hook_toString(...args) {
+        for (var i = 0; i < anti_map.length; i++) {
+            if (anti_map[i].from === this) {
+                return anti_map[i].to;
+            }
+        }
+        return original_toString.apply(this, args);
+    }
+
+    anti_map.push({from: hook_Function, to: original_Function.toString()});
+    anti_map.push({from: hook_toString, to: original_toString.toString()});
+
+    Function = hook_Function;
+    Function.prototype.toString = hook_toString;
 })()
