@@ -3,11 +3,11 @@ Anti-cheat bypasses for krunker
 
 Featuring only the bare minimum esps (this is not a cheat flex repo but an anti cheat bypass repo). Use Tamper monkey to load any
 
-| Method | 1.8.5 |
+| Method | 1.8.8 |
 | --- | --- |
 | [ArgumentsHook](https://github.com/hrt/KrunkerBypass/tree/master/ArgumentsHook) |  ✅  |
 | [ArrayHook](https://github.com/hrt/KrunkerBypass/tree/master/ArrayHook) |  ✅  |
-| [DecoderHook](https://github.com/hrt/KrunkerBypass/tree/master/DecoderHook) |  ✅  |
+| [DecoderHook](https://github.com/hrt/KrunkerBypass/tree/master/DecoderHook) |  havent tried  |
 | [FunctionHook](https://github.com/hrt/KrunkerBypass/tree/master/FunctionHook) |  ✅  |
 
 
