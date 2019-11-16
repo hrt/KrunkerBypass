@@ -1,3 +1,4 @@
+Can't be bothered to maintain several repos. Just check [wheelchair](https://github.com/hrt/wheelchair) for a bypass.
 # KrunkerBypass
 Anti-cheat bypasses for krunker
 
