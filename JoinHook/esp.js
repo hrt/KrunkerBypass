@@ -15,7 +15,7 @@
 				var ret = Function.prototype.apply.apply(target, [_this, _arguments]);
 				if (_arguments.length && _arguments[0] == '' && _this.length > 1000) {
 					var game_js = ret;
-					game_js = game_js.replace(/if\(!\w+\['\w+'\]\)continue;/, ''); // esp
+					game_js = game_js.replace(/(if\(!\w+\['\w+'\]\)conti)nue;/, '/*$1*/'); // esp whilst keeping same script length
 					return game_js;
 				}
 				return ret;
