@@ -2,7 +2,7 @@
 // @name         Kronk name esp
 // @version      3.2.0
 // @author       github.com/hrt
-// @match        https://krunker.io/?game*
+// @match        https://krunker.io/*
 // @grant        none
 // ==/UserScript==
 
