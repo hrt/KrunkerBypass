@@ -1,18 +1,21 @@
-Can't be bothered to maintain several repos. Just check [wheelchair](https://github.com/hrt/wheelchair) for a bypass.
 # KrunkerBypass
 Anti-cheat bypasses for krunker
 
 Featuring only the bare minimum esps (this is not a cheat flex repo but an anti cheat bypass repo). Use Tamper monkey to load any
 
-| Method | 1.8.8 |
+I do not check if any of the methods ban! Only make sure they work.
+
+| Method | 3.2.0 |
 | --- | --- |
-| [ArgumentsHook](https://github.com/hrt/KrunkerBypass/tree/master/ArgumentsHook) |  ✅  |
-| [ArrayHook](https://github.com/hrt/KrunkerBypass/tree/master/ArrayHook) |  ✅  |
-| [DecoderHook](https://github.com/hrt/KrunkerBypass/tree/master/DecoderHook) |  havent tried  |
-| [FunctionHook](https://github.com/hrt/KrunkerBypass/tree/master/FunctionHook) |  ✅  |
+| [JoinHook](https://github.com/hrt/KrunkerBypass/tree/master/ArgumentsHook) |  ✅  |
 
-
-1.8.3 - they begun hooking `String.prototype.replace` to detect modifications
+## JoinHook
+The html page now uses inline js to load iframes and avoid rigged prototypes. So just rig the creation of iframes and rig the prototypes in the iframes. The game still uses xor encoding eventhough you can figure out the xor key by just observing the encoded message.
+```(function anonymous(url) {
+return new Promise(function(resolve) { fetch(url).then(res => res.arrayBuffer()).then(function(buffer) { resolve(Array.from(new Uint8Array(buffer)).map(x=>String.fromCharCode(x^85)).join('')) }); });
+})('https://krunker.io/pkg/krunker.qaN49.vries')
+```
+As you can see, they end up using join which we hook.
 
 ## ArrayHook
 The game logic uses arrays to hold entities. We hook the prototype `Array.prototype.push` to access player list.
