@@ -15,7 +15,7 @@ The html page now uses inline js to load iframes and avoid rigged prototypes. So
 return new Promise(function(resolve) { fetch(url).then(res => res.arrayBuffer()).then(function(buffer) { resolve(Array.from(new Uint8Array(buffer)).map(x=>String.fromCharCode(x^85)).join('')) }); });
 })('https://krunker.io/pkg/krunker.qaN49.vries')
 ```
-As you can see, they end up using join which we hook.
+As you can see, they end up using join which we hook. Methods to detect proxies may be relevant here: https://github.com/hrt/ProxyDetectJS
 
 ## ArrayHook
 The game logic uses arrays to hold entities. We hook the prototype `Array.prototype.push` to access player list.
